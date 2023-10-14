@@ -7,6 +7,8 @@ export default {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
     ],
 
     theme: {
@@ -16,6 +18,12 @@ export default {
             },
         },
     },
+    safelist: [
+        {
+          /* We want any bg color class to be generated */
+          pattern: /^bg-\w+-\d{2,3}$/,
+        }
+    ],
 
     plugins: [forms],
 };
