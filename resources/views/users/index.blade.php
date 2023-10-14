@@ -7,7 +7,10 @@
                      <p class="font-semibold">{{ $user->name }}</p>
                      <p class=text-gray-500>{{ $user->email }}</p>
                  </div>
-                 <p class="font-bold text-gray-500">{{ $user->role }}</p>
+                 <div class="text-right">
+                     <p class="font-bold text-gray-500">{{ $user->role }}</p>
+                     <p>{{ $user->role->description() }}</p>
+                 </div>
              </li>
          @endforeach
      </ul>
