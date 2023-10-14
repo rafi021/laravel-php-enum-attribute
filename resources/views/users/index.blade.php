@@ -9,7 +9,10 @@
                  </div>
                  <div class="text-right">
                      <p class="font-bold text-gray-500">{{ $user->role }}</p>
-                     <p>{{ $user->role->description() }}</p>
+
+                     <!-- Call the attribute description for this Enum case -->
+                     <p class="text-gray-500">{{ $user->role->description() }}</p>
+
                  </div>
              </li>
          @endforeach
